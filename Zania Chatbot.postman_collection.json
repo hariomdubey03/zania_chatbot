@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "122a13e4-9c7a-48dc-a849-062f05fe1e91",
+		"name": "Zania Chatbot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17200379"
+	},
+	"item": [
+		{
+			"name": "Chat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "questions",
+							"type": "file",
+							"src": "/home/hariom/Documents/ai_chatbot/questions.json"
+						},
+						{
+							"key": "data",
+							"type": "file",
+							"src": "/home/hariom/Documents/ai_chatbot/theGoogleFileSystem.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base}}/zania/chat",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"zania",
+						"chat"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Chat",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "questions",
+									"type": "file",
+									"src": "/home/hariom/Documents/ai_chatbot/questions.json"
+								},
+								{
+									"key": "data",
+									"type": "file",
+									"src": "/home/hariom/Documents/ai_chatbot/theGoogleFileSystem.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/zania/chat",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"zania",
+								"chat"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Wed, 04 Sep 2024 04:17:23 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-disposition",
+							"value": "attachment;filename=answers.json"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"A GFS cluster consists of\": \"one master, two master replicas, 16 chunkservers, and 16 clients.\",\n    \"what chunk size they have choosen ?\": \"They have chosen 64 MB as their chunk size.\",\n    \"What GFS does not gurantee ?\": \"GFS does not provide any caching below the file system interface.\",\n    \"Explain master replication\": \"Master replication is a technique used in the GFS (Google File System) for ensuring reliability. It involves replicating the state of the master (the central server that manages the file system) on multiple machines. This means that if the master fails, a backup can quickly take its place. Additionally, there are \\\"shadow\\\" masters that provide read-only access to the file system even when the primary master is down, with a slight lag. This helps enhance read availability for files that are not actively being changed. To stay updated, the shadow master constantly reads a replica of the master's state.\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": "http://localhost:8000",
+			"type": "string"
+		}
+	]
+}
