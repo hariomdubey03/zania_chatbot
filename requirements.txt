@@ -58,3 +58,4 @@ typing_extensions==4.12.2
 urllib3==2.2.2
 uvicorn==0.24.0.post1
 yarl==1.9.8
+gunicorn==21.2.0

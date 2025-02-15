@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "122a13e4-9c7a-48dc-a849-062f05fe1e91",
-		"name": "Zania Chatbot",
+		"name": "QueryMind Chatbot",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "17200379"
 	},
@@ -27,12 +27,12 @@
 					]
 				},
 				"url": {
-					"raw": "{{base}}/zania/chat",
+					"raw": "{{base}}/querymind/chat",
 					"host": [
 						"{{base}}"
 					],
 					"path": [
-						"zania",
+						"querymind",
 						"chat"
 					]
 				}
@@ -59,12 +59,12 @@
 							]
 						},
 						"url": {
-							"raw": "{{base}}/zania/chat",
+							"raw": "{{base}}/querymind/chat",
 							"host": [
 								"{{base}}"
 							],
 							"path": [
-								"zania",
+								"querymind",
 								"chat"
 							]
 						}

@@ -16,7 +16,7 @@ log_config = {
             "level": "INFO",
         },
         "file": {
-            "filename": "logs/zania_chatbot_service.log",
+            "filename": "logs/querymind_chatbot_service.log",
             "formatter": "file_formatter",
             "class": "logging.FileHandler",
             "level": "INFO",

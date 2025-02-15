@@ -1,8 +1,8 @@
-# Zania Chatbot API
+# QueryMind Chatbot API
 
 ## Overview
 
-The Zania Chatbot API allows you to interact with a chatbot service. This API provides an endpoint to submit documents and questions, which are then processed to return answers.
+The QueryMind Chatbot API allows you to interact with a chatbot service. This API provides an endpoint to submit documents and questions, which are then processed to return answers.
 
 
 ## Setup
@@ -39,7 +39,7 @@ http://localhost:8000
 
 ## Endpoint
 
-### POST /zania/chat
+### POST /querymind/chat
 
 This endpoint processes a PDF document and a JSON file containing questions. It returns answers in JSON format.
 
@@ -47,7 +47,7 @@ This endpoint processes a PDF document and a JSON file containing questions. It 
 
 **Method**: `POST`
 
-**URL**: `/zania/chat`
+**URL**: `/querymind/chat`
 
 **Headers**:
 - `Content-Type`: `multipart/form-data`
@@ -55,10 +55,10 @@ This endpoint processes a PDF document and a JSON file containing questions. It 
 **Body**: `form-data`
 - `questions`: The JSON file containing questions to be answered.
   - **Type**: File
-  - **Example Path**: `~/zania_chatbot//ai_chatbot/questions.json`
+  - **Example Path**: `~/querymind_chatbot//ai_chatbot/questions.json`
 - `data`: The PDF file containing the data to be processed.
   - **Type**: File
-  - **Example Path**: `~/zania_chatbot/ai_chatbot/theGoogleFileSystem.pdf`
+  - **Example Path**: `~/querymind_chatbot/ai_chatbot/theGoogleFileSystem.pdf`
 
 #### Response
 

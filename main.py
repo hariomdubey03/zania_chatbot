@@ -20,8 +20,8 @@ app = FastAPI(timezone=config.TIMEZONE)
 
 
 # POST: Webhook
-@app.post("/zania/chat")
-async def zania_chat(
+@app.post("/querymind/chat")
+async def querymind_chat(
     questions: UploadFile = File(...), data: UploadFile = File(...)
 ):
     try:
